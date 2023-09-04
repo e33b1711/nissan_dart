@@ -39,15 +39,13 @@ class NissanConnectBattery {
     this.isConnected = recs['plugStatus'] != 0;
     this.isCharging = recs['chargeStatus'] != 0;
     this.batteryPercentage =
-        NumberFormat('0.0').format(recs['batteryLevel']).toString() + '%';
+        NumberFormat('0').format(recs['batteryLevel']).toString();
     this.cruisingRangeAcOffKm =
-        unitCalculator.toKilometersPretty(recs['rangeHvacOff'].toDouble()) +
-            ' km';
+        unitCalculator.toKilometersPretty(recs['rangeHvacOff'].toDouble());
     this.cruisingRangeAcOffMiles =
         unitCalculator.toMilesPretty(recs['rangeHvacOff'].toDouble()) + ' mi';
     this.cruisingRangeAcOnKm =
-        unitCalculator.toKilometersPretty(recs['rangeHvacOn'].toDouble()) +
-            ' km';
+        unitCalculator.toKilometersPretty(recs['rangeHvacOn'].toDouble());
     this.cruisingRangeAcOnMiles =
         unitCalculator.toMilesPretty(recs['rangeHvacOn'].toDouble()) + ' mi';
     this.timeToFullSlow = Duration(minutes: recs['timeRequiredToFullSlow']);
