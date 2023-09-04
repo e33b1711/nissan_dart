@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-cmd = "nissanconnect_example.exe"
+cmd = "./query_leaf.exe"
 
 # returns output as byte string
 proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
